@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
+    "generate-api": "orval",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -14,6 +15,7 @@
     "@react-navigation/bottom-tabs": "^7.15.5",
     "@react-navigation/elements": "^2.9.10",
     "@react-navigation/native": "^7.1.33",
+    "@tanstack/react-query": "^5.96.1",
     "expo": "~55.0.9",
     "expo-constants": "~55.0.9",
     "expo-device": "~55.0.10",
@@ -27,15 +29,19 @@
     "expo-symbols": "~55.0.5",
     "expo-system-ui": "~55.0.11",
     "expo-web-browser": "~55.0.10",
+    "jotai": "^2.19.0",
+    "orval": "^8.6.2",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-hook-form": "^7.72.0",
     "react-native": "0.83.4",
     "react-native-gesture-handler": "~2.30.0",
-    "react-native-worklets": "0.7.2",
     "react-native-reanimated": "4.2.1",
     "react-native-safe-area-context": "~5.6.2",
     "react-native-screens": "~4.23.0",
-    "react-native-web": "~0.21.0"
+    "react-native-web": "~0.21.0",
+    "react-native-worklets": "0.7.2",
+    "toastify-react-native": "^7.2.3"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
