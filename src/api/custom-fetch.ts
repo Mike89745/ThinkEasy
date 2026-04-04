@@ -1,9 +1,6 @@
 const BASE_URL = 'https://frontend-test-be.stage.thinkeasy.cz';
 
-export const customFetch = async <T>(
-  url: string,
-  options: RequestInit,
-): Promise<T> => {
+export const customFetch = async <T>(url: string, options: RequestInit): Promise<T> => {
   const response = await fetch(`${BASE_URL}${url}`, {
     ...options,
     headers: {

@@ -1,0 +1,8 @@
+node_modules/
+.expo/
+dist/
+web-build/
+src/api/model/
+src/api/auth/
+src/api/posts/
+assets/

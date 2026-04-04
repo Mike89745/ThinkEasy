@@ -1,0 +1,19 @@
+node_modules/
+.expo/
+dist/
+web-build/
+
+# Generated API files (orval output)
+src/api/model/
+src/api/auth/
+src/api/posts/
+
+# Config files (plain JS, no TS project context needed)
+.eslintrc.js
+babel.config.js
+metro.config.js
+tailwind.config.js
+orval.config.ts
+
+# Test mocks
+src/__mocks__/
