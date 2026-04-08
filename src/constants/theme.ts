@@ -7,24 +7,52 @@ import '@/global.css';
 
 import { Platform } from 'react-native';
 
+const PALETTE = {
+  black: '#000000',
+  white: '#ffffff',
+  neutral100: '#F0F0F3',
+  neutral200: '#E0E1E6',
+  neutral600: '#60646C',
+  neutral700: '#B0B4BA',
+  neutral900: '#212225',
+  neutral950: '#2E3135',
+  blue600: '#2563eb',
+  blue300Alpha35: 'rgba(147, 197, 253, 0.35)',
+  emerald600: '#059669',
+  emerald300Alpha35: 'rgba(110, 231, 183, 0.35)',
+  splashBlue500: '#208AEF',
+  splashBlue600: '#0274DF',
+  splashBlue400: '#3C9FFE',
+} as const;
+
+export const AUTH_LOGIN_ACCENT = PALETTE.blue600;
+export const AUTH_LOGIN_ACCENT_SOFT = PALETTE.blue300Alpha35;
+export const AUTH_SIGNUP_ACCENT = PALETTE.emerald600;
+export const AUTH_SIGNUP_ACCENT_SOFT = PALETTE.emerald300Alpha35;
+export const AUTH_CARD_SHADOW = PALETTE.black;
+
+export const SPLASH_GRADIENT_START = PALETTE.splashBlue400;
+export const SPLASH_GRADIENT_END = PALETTE.splashBlue600;
+export const SPLASH_BACKGROUND = PALETTE.splashBlue500;
+
 export const Colors = {
   light: {
-    text: '#000000',
-    background: '#ffffff',
-    backgroundElement: '#F0F0F3',
-    backgroundSelected: '#E0E1E6',
-    textSecondary: '#60646C',
+    text: PALETTE.black,
+    background: PALETTE.white,
+    backgroundElement: PALETTE.neutral100,
+    backgroundSelected: PALETTE.neutral200,
+    textSecondary: PALETTE.neutral600,
   },
   dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
+    text: PALETTE.white,
+    background: PALETTE.black,
+    backgroundElement: PALETTE.neutral900,
+    backgroundSelected: PALETTE.neutral950,
+    textSecondary: PALETTE.neutral700,
   },
 } as const;
 
-export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
+export type ThemeColor = keyof typeof Colors.light;
 
 export const Fonts = Platform.select({
   ios: {

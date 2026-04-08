@@ -4,6 +4,8 @@ import { Dimensions, StyleSheet, View } from 'react-native';
 import Animated, { Easing, Keyframe } from 'react-native-reanimated';
 import { scheduleOnRN } from 'react-native-worklets';
 
+import { SPLASH_BACKGROUND, SPLASH_GRADIENT_END, SPLASH_GRADIENT_START } from '@/constants/theme';
+
 const INITIAL_SCALE_FACTOR = Dimensions.get('screen').height / 90;
 const DURATION = 600;
 
@@ -119,14 +121,14 @@ const styles = StyleSheet.create({
   },
   background: {
     borderRadius: 40,
-    experimental_backgroundImage: `linear-gradient(180deg, #3C9FFE, #0274DF)`,
+    experimental_backgroundImage: `linear-gradient(180deg, ${SPLASH_GRADIENT_START}, ${SPLASH_GRADIENT_END})`,
     width: 128,
     height: 128,
     position: 'absolute',
   },
   backgroundSolidColor: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: '#208AEF',
+    backgroundColor: SPLASH_BACKGROUND,
     zIndex: 1000,
   },
 });

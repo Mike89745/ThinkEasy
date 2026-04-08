@@ -10,6 +10,7 @@
     "ios": {
       "icon": "./assets/expo.icon"
     },
+
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
@@ -17,13 +18,16 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anonymous.ThinkEasy"
     },
     "web": {
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      "@config-plugins/detox",
       "expo-router",
       [
         "expo-splash-screen",
@@ -33,6 +37,13 @@
             "image": "./assets/images/splash-icon.png",
             "imageWidth": 76
           }
+        }
+      ],
+      [
+        "expo-dev-client",
+        {
+          "launchMode": "most-recent",
+          "showFloatingButton": false
         }
       ]
     ],
